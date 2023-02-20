@@ -1,103 +1,116 @@
 <html>
-<head>
-<title>People</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <title>People</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-<h1>People</h1>
-
-[ <a href="index.html">Home</a> | <a href="locations.html">Locations</a> | <a href="people.html">People</a> | <a href="health-problems.html">Health Problems</a> | <a href="pollution-by-day.html">Dates with Pollution Data</a> | <a href="daily-location-pollution.html">Daily Pollution in Each Location</a> | <a href="individual-health-issues.html">Individual Health Issues</a> | <a href="city-health-issues.html">Health Issues By City</a> ]
-<div id="browse" style="display: block">
-<p><strong>Browse People</strong></p>
-<table border="1" cellpadding="5">
-  <tr>
-    <th>Person ID</th>
-    <th>Age</th>
-    <th>Location (City Name)</th>
-    <th>Delete</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>55</td>
-    <td>New York City</td>
-    <td><input class="btn" type="button" value="Delete" onclick="deletePerson('this.personID')"></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>44</td>
-    <td>Los Angeles</td>
-    <td><input class="btn" type="button" value="Delete" onclick="deletePerson('this.personID')"></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>61</td>
-    <td>Chicago</td>
-    <td><input class="btn" type="button" value="Delete" onclick="deletePerson('this.personID')"></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>29</td>
-    <td>Houston</td>
-    <td><input class="btn" type="button" value="Delete" onclick="deletePerson('this.personID')"></td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>53</td>
-    <td>Dallas-Fort</td>
-    <td><input class="btn" type="button" value="Delete" onclick="deletePerson('this.personID')"></td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-</div>
-<div id="insert" style="display: block">
-    <form id="addPerson">
-        <legend><strong>Add Person</strong></legend>
+  <body>
+    <header>
+      <h1>People</h1>
+    </header>
+    
+    <a href="index.html">Home</a>
+    <a href="locations.html">Locations</a>
+    <a href="people.html">People</a>
+    <a href="health-problems.html">Health Problems</a>
+    <a href="pollution-by-day.html">Dates with Pollution Data</a>
+    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
+    <a href="individual-health-issues.html">Individual Health Issues</a>
+    <a href="city-health-issues.html">Health Issues By City</a>
+    
+    <main>
+      <div id="browse">
+        <h3><strong>Browse People</strong></h3>
+        <table>
+          <tr>
+            <th>Person ID</th>
+            <th>Age</th>
+            <th>Location (City Name)</th>
+            <th>Delete</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>55</td>
+            <td>New York City</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePerson('this.personID')"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>44</td>
+            <td>Los Angeles</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePerson('this.personID')"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>61</td>
+            <td>Chicago</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePerson('this.personID')"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>29</td>
+            <td>Houston</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePerson('this.personID')"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>53</td>
+            <td>Dallas-Fort Worth</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePerson('this.personID')"></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div id="insert">
+        <form id="addPerson">
+          <legend><strong>Add Person</strong></legend>
           <fieldset class="fields">
             <label> Age </label> <input type="text" name="city">
-            <label for = "city"> Select a City: </label>
-            <select name = "city" id = "city">
-                <option value="select">Select a City</option>
-                <option value="1">New York City</option>
-                <option value="2">Los Angeles</option>
-                <option value="3">Chicago</option>
-                <option value="4">Houston</option>
-                <option value="5">Dallas-Fort Worth</option>
+            <label for="city"> Select a City: </label>
+            <select name="city" id="city">
+              <option value="select">Select a City</option>
+              <option value="1">New York City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">Chicago</option>
+              <option value="4">Houston</option>
+              <option value="5">Dallas-Fort Worth</option>
             </select>
           </fieldset>
           <input class="btn" type="submit" id="addPerson" value="Add Person">
-	</form>
-</div>
-
-<p>&nbsp;</p>
-<div id="update" style="display: block">
-  <form id="updatePerson">
-      <legend><strong>Update Person</strong></legend>
+        </form>
+      </div>
+      
+      <div id="update">
+        <form id="updatePerson">
+          <legend><strong>Update Person</strong></legend>
           <fieldset class="fields">
-            <label for = "person"> Select a Person: </label>
-            <select name = "person" id = "person">
-                <option value="select">Select the Person's ID</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+            <label for="person"> Select a Person: </label>
+            <select name="person" id="person">
+              <option value="select">Select the Person's ID</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
-            <label> Age </label> <input type="text"  name="age">
-            <label for = "city"> Select a City: </label>
-            <select name = "city" id = "city">
-                <option value="select">Select a City</option>
-                <option value="1">New York City</option>
-                <option value="2">Los Angeles</option>
-                <option value="3">Chicago</option>
-                <option value="4">Houston</option>
-                <option value="5">Dallas-Fort Worth</option>
+            <label> Age </label> <input type="text" name="age">
+            <label for="city"> Select a City: </label>
+            <select name="city" id="city">
+              <option value="select">Select a City</option>
+              <option value="1">New York City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">Chicago</option>
+              <option value="4">Houston</option>
+              <option value="5">Dallas-Fort Worth</option>
             </select>
-        </fieldset>
-    <input class="btn" type="submit" id="UpdatePerson" value="Update Person">
-  </form> 
-</div>
-<p>&nbsp;</p>
-</div>
-</body>
+          </fieldset>
+          <input class="btn" type="submit" id="UpdatePerson" value="Update Person">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sangtawun Miller & Andrea Irwin</p>
+    </footer>
+  </body>
 </html>
