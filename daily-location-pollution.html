@@ -1,170 +1,185 @@
 <html>
-<head>
-<title>Daily Location Pollution</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <title>Daily Location Pollution</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-<h1>Daily Location Pollution</h1>
+  <body>
+    <header>
+      <h1>Daily Location Pollution</h1>
+    </header>
+    
+    <a href="index.html">Home</a>
+    <a href="locations.html">Locations</a>
+    <a href="people.html">People</a>
+    <a href="health-problems.html">Health Problems</a>
+    <a href="pollution-by-day.html">Dates with Pollution Data</a>
+    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
+    <a href="individual-health-issues.html">Individual Health Issues</a>
+    <a href="city-health-issues.html">Health Issues By City</a>
+    
+    <main>
+      <div id="browse">
+        <h3><strong> Daily Pollution by Location</strong></h3>
 
-[ <a href="index.html">Home</a> | <a href="locations.html">Locations</a> | <a href="people.html">People</a> | <a href="health-problems.html">Health Problems</a> | <a href="pollution-by-day.html">Dates with Pollution Data</a> | <a href="daily-location-pollution.html">Daily Pollution in Each Location</a> | <a href="individual-health-issues.html">Individual Health Issues</a> | <a href="city-health-issues.html">Health Issues By City</a> ]
-<div id="browse" style="display: block">
-<p>Use the following forms to:<br>
-    1. View pollution levels by city or by date<br>
-    2. Add pollution data <br>
-    3. Update pollutant levels for all cities on a specific date
-</p>
-<p> <strong> Daily Pollution by Location</strong></p>
-<table border="1" cellpadding="5">
-  <tr>
-    <th>Log ID</th>
-    <th>City</th>
-    <th>Day Recorded</th>
-    <th>Particulate Level</th>
-    <th>NO2 Level</th>
-    <th>PAH Level</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>New York City</td>
-    <td>2023-02-01</td>
-    <td>12</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>New York City</td>
-    <td>2023-02-02</td>
-    <td>13</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Chicago</td>
-    <td>2023-02-01</td>
-    <td>15</td>
-    <td>2</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Los Angeles</td>
-    <td>2023-02-01</td>
-    <td>5</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Los Angeles</td>
-    <td>2023-02-02</td>
-    <td>8</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-</table>
-<p>&nbsp;</p>
+        <table>
+          <tr>
+            <th>Log ID</th>
+            <th>City</th>
+            <th>Day Recorded</th>
+            <th>Particulate Level</th>
+            <th>NO2 Level</th>
+            <th>PAH Level</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>New York City</td>
+            <td>2023-02-01</td>
+            <td>12</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>New York City</td>
+            <td>2023-02-02</td>
+            <td>13</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Chicago</td>
+            <td>2023-02-01</td>
+            <td>15</td>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Los Angeles</td>
+            <td>2023-02-01</td>
+            <td>5</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Los Angeles</td>
+            <td>2023-02-02</td>
+            <td>8</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
 
-</div>
-<div id="browse" style="display: block">
-    <form id="browsePollutionByCity">
-        <legend><strong>Browse Pollution Levels by City</strong></legend>
+      <ol>
+        <p>Use the following forms to:</p>
+        <li>View pollution levels by city or by date</li>
+        <li>Add pollution data</li>
+        <li>Update pollutant levels for all cities on a specific date</li>
+      </ol>
+      
+      <div id="browse">
+        <form id="browsePollutionByCity">
+          <legend><strong>Browse Pollution Levels by City</strong></legend>
           <fieldset class="fields">
-            <label for = "city"> Select a City: </label>
-            <select name = "city" id = "city">
-                <option value="select">Select</option>
-                <option value="1">New York City</option>
-                <option value="2">Los Angeles</option>
-                <option value="3">Chicago</option>
-                <option value="4">Houston</option>
-                <option value="5">Dallas-Fort Worth</option>
+            <label for="city"> Select a City: </label>
+            <select name="city" id="city">
+              <option value="select">Select</option>
+              <option value="1">New York City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">Chicago</option>
+              <option value="4">Houston</option>
+              <option value="5">Dallas-Fort Worth</option>
             </select>
           </fieldset>
-          <input class="btn" type="submit" id="browsePollutionByCity" value="View all Pollution Data for that City">
-	</form>
-</div>
-<p>&nbsp;</p>
-</div>
-<div id="browse" style="display: block">
-    <form id="browsePollutionByDate">
-        <legend><strong>Browse Pollution Levels by Date</strong></legend>
+          <input class="btn" type="submit" id="browsePollutionByCity" value="View Levels by City">
+        </form>
+      </div>
+      
+      <div id="browse">
+        <form id="browsePollutionByDate">
+          <legend><strong>Browse Pollution Levels by Date</strong></legend>
           <fieldset class="fields">
-            <label for = "date"> Select a Date: </label>
-            <select name = "date" id = "date">
-                <option value="select">Select</option>
-                <option value="1">2023-02-01</option>
-                <option value="2">2023-02-02</option>
-                <option value="3">2023-02-03</option>
-                <option value="4">2023-02-04</option>
-                <option value="5">2023-02-05</option>
+            <label for="date"> Select a Date: </label>
+            <select name="date" id="date">
+              <option value="select">Select</option>
+              <option value="1">2023-02-01</option>
+              <option value="2">2023-02-02</option>
+              <option value="3">2023-02-03</option>
+              <option value="4">2023-02-04</option>
+              <option value="5">2023-02-05</option>
             </select>
           </fieldset>
-          <input class="btn" type="submit" id="browsePollutionByDate" value="View all Pollution Data for that Date">
-	</form>
-</div>
-<p>&nbsp;</p>
-<div id="insert" style="display: block">
-    <form id="addPollutionLevel">
-        <legend><strong>Add Pollution Levels</strong></legend>
+          <input class="btn" type="submit" id="browsePollutionByDate" value="View Levels by Date">
+        </form>
+      </div>
+      
+      <div id="insert">
+        <form id="addPollutionLevel">
+          <legend><strong>Add Pollution Levels</strong></legend>
           <fieldset class="fields">
-            <label for = "city"> Select a City: </label>
-            <select name = "city" id = "city">
-                <option value="select">Select a City</option>
-                <option value="1">New York City</option>
-                <option value="2">Los Angeles</option>
-                <option value="3">Chicago</option>
-                <option value="4">Houston</option>
-                <option value="5">Dallas-Fort Worth</option>
+            <label for="city"> Select a City: </label>
+            <select name="city" id="city">
+              <option value="select">Select a City</option>
+              <option value="1">New York City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">Chicago</option>
+              <option value="4">Houston</option>
+              <option value="5">Dallas-Fort Worth</option>
             </select>
-            <label for = "date"> Select a Date: </label>
-            <select name = "date" id = "date">
-                <option value="select">Select</option>
-                <option value="1">2023-02-01</option>
-                <option value="2">2023-02-02</option>
-                <option value="3">2023-02-03</option>
-                <option value="4">2023-02-04</option>
-                <option value="5">2023-02-05</option>
+            <label for="date"> Select a Date: </label>
+            <select name="date" id="date">
+              <option value="select">Select</option>
+              <option value="1">2023-02-01</option>
+              <option value="2">2023-02-02</option>
+              <option value="3">2023-02-03</option>
+              <option value="4">2023-02-04</option>
+              <option value="5">2023-02-05</option>
             </select>
-            <label> Particulate Level </label> <input type="text"  name="particulate level">
-            <label> NO2 Level </label> <input type="text"  name="NO2 level">
-            <label> PAH Level </label> <input type="text"  name="PAH level">
+            <label> Particulate Level </label> <input type="text" name="particulate level">
+            <label> NO2 Level </label> <input type="text" name="NO2 level">
+            <label> PAH Level </label> <input type="text" name="PAH level">
           </fieldset>
           <input class="btn" type="submit" id="addPollutionLevel" value="Add Pollution Levels">
-	</form>
-</div>
-<p>&nbsp;</p>
-<div id="update" style="display: block">
-  <form id="updatePollutionLevel">
-      <legend><strong>Update Pollution Levels</strong></legend>
+        </form>
+      </div>
+      
+      <div id="update">
+        <form id="updatePollutionLevel">
+          <legend><strong>Update Pollution Levels</strong></legend>
           <fieldset class="fields">
-            <label for = "city"> Select a City: </label>
-            <select name = "city" id = "city">
-                <option value="select">Select a City</option>
-                <option value="1">New York City</option>
-                <option value="2">Los Angeles</option>
-                <option value="3">Chicago</option>
-                <option value="4">Houston</option>
-                <option value="5">Dallas-Fort Worth</option>
+            <label for="city"> Select a City: </label>
+            <select name="city" id="city">
+              <option value="select">Select a City</option>
+              <option value="1">New York City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">Chicago</option>
+              <option value="4">Houston</option>
+              <option value="5">Dallas-Fort Worth</option>
             </select>
-            <label for = "date"> Select a Date: </label>
-            <select name = "date" id = "date">
-                <option value="select">Select</option>
-                <option value="1">2023-02-01</option>
-                <option value="2">2023-02-02</option>
-                <option value="3">2023-02-03</option>
-                <option value="4">2023-02-04</option>
-                <option value="5">2023-02-05</option>
+            <label for="date"> Select a Date: </label>
+            <select name="date" id="date">
+              <option value="select">Select</option>
+              <option value="1">2023-02-01</option>
+              <option value="2">2023-02-02</option>
+              <option value="3">2023-02-03</option>
+              <option value="4">2023-02-04</option>
+              <option value="5">2023-02-05</option>
             </select>
-            <label> Particulate Level </label> <input type="text"  name="particulate level">
-            <label> NO2 Level </label> <input type="text"  name="NO2 level">
-            <label> PAH Level </label> <input type="text"  name="PAH level">
-        </fieldset>
-    <input class="btn" type="submit" id="UpdatePollutionLevel" value="Update Pollution Levels">
-  </form> 
-</div>
-<p>&nbsp;</p>
-</div>
-</body>
+            <label> Particulate Level </label> <input type="text" name="particulate level">
+            <label> NO2 Level </label> <input type="text" name="NO2 level">
+            <label> PAH Level </label> <input type="text" name="PAH level">
+          </fieldset>
+          <input class="btn" type="submit" id="UpdatePollutionLevel" value="Update Pollution Levels">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sangtawun Miller & Andrea Irwin</p>
+    </footer>
+  </body>
 </html>

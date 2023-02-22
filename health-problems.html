@@ -1,98 +1,112 @@
 <html>
-<head>
-<title>Health Problems</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <title>Health Problems</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-<h1>Health Problems</h1>
-
-[ <a href="index.html">Home</a> | <a href="locations.html">Locations</a> | <a href="people.html">People</a> | <a href="health-problems.html">Health Problems</a> | <a href="pollution-by-day.html">Dates with Pollution Data</a> | <a href="daily-location-pollution.html">Daily Pollution in Each Location</a> | <a href="individual-health-issues.html">Individual Health Issues</a> | <a href="city-health-issues.html">Health Issues By City</a> ]
-<div id="browse" style="display: block">
-<p><strong>Browse Health Problems</strong></p>
-<table border="1" cellpadding="5">
-  <tr>
-    <th>Problem ID</th>
-    <th>Health Issue</th>
-    <th>Health Issue Characteristics</th>
-    <th>Terminal</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>chronic obstructive pulmonary disease</td>
-    <td>shortness of breath, wheezing, chronic cough</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>stroke</td>
-    <td>paralysis with weak muscles, vertigo, slurred speech, mental confusion</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>ischaemic heart disease</td>
-    <td>chest pain</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>lung cancer</td>
-    <td>chronic cough, chest pressure, fatigue, chest pain, wheezing</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>pneumonia</td>
-    <td>fever, malaise, coughing, sharp chest pain, wheezing</td>
-    <td></td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-</div>
-<div id="insert" style="display: block">
-    <form id="addHealthProblem">
-        <legend><strong>Add Health Problem</strong></legend>
+  <body>
+    <header>
+      <h1>Health Problems</h1>
+    </header>
+    
+    <a href="index.html">Home</a>
+    <a href="locations.html">Locations</a>
+    <a href="people.html">People</a>
+    <a href="health-problems.html">Health Problems</a>
+    <a href="pollution-by-day.html">Dates with Pollution Data</a>
+    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
+    <a href="individual-health-issues.html">Individual Health Issues</a>
+    <a href="city-health-issues.html">Health Issues By City</a>
+    
+    <main>
+      <div id="browse">
+        <h3><strong>Browse Health Problems</strong></h3>
+        <table>
+          <tr>
+            <th>Problem ID</th>
+            <th>Health Issue</th>
+            <th>Health Issue Characteristics</th>
+            <th>Terminal</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>chronic obstructive pulmonary disease</td>
+            <td>shortness of breath, wheezing, chronic cough</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>stroke</td>
+            <td>paralysis with weak muscles, vertigo, slurred speech, mental confusion</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>ischaemic heart disease</td>
+            <td>chest pain</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>lung cancer</td>
+            <td>chronic cough, chest pressure, fatigue, chest pain, wheezing</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>pneumonia</td>
+            <td>fever, malaise, coughing, sharp chest pain, wheezing</td>
+            <td></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+      </div>
+      
+      <div id="insert">
+        <form id="addHealthProblem">
+          <legend><strong>Add Health Problem</strong></legend>
           <fieldset class="fields">
             <label> Health Issue </label> <input type="text" name="health issue">
             <label> Health Issue Characteristics </label> <input type="text" name="health issue Characteristics">
-            <label for = "terminal"> is Terminal? </label>
-            <select name = "terminal" id = "terminal">
-                <option value="select">Select Yes/No</option>
-                <option value="0">Yes</option>
-                <option value="1">No</option>
+            <label for="terminal"> is Terminal? </label>
+            <select name="terminal" id="terminal">
+              <option value="select">Select Yes/No</option>
+              <option value="0">Yes</option>
+              <option value="1">No</option>
             </select>
           </fieldset>
           <input class="btn" type="submit" id="addHealthProblem" value="Add Health Problem">
-	</form>
-</div>
+        </form>
+      </div>
 
-<p>&nbsp;</p>
-<div id="update" style="display: block">
-  <form id="updateHealthProblem">
-      <legend><strong>Update Health Problem</strong></legend>
+      <div id="update">
+        <form id="updateHealthProblem">
+          <legend><strong>Update Health Problem</strong></legend>
           <fieldset class="fields">
-            <label for = "health problem"> Select a Health Problem: </label>
-            <select name = "health problem" id = "health problem">
-                <option value="select">Select</option>
-                <option value="1">chronic obstructive pulmonary disease</option>
-                <option value="2">stroke</option>
-                <option value="3">ischaemic heart disease</option>
-                <option value="4">lung cancer</option>
-                <option value="5">pneumonia</option>
+            <label for="health problem"> Select a Health Problem: </label>
+            <select name="health problem" id="health problem">
+              <option value="select">Select</option>
+              <option value="1">chronic obstructive pulmonary disease</option>
+              <option value="2">stroke</option>
+              <option value="3">ischaemic heart disease</option>
+              <option value="4">lung cancer</option>
+              <option value="5">pneumonia</option>
             </select>
             <label> Health Issue Characteristics </label> <input type="text" name="health issue characteristics">
-            <label for = "terminal"> is Terminal? </label>
-            <select name = "terminal" id = "terminal">
-                <option value="select">Select Yes/No</option>
-                <option value="0">Yes</option>
-                <option value="1">No</option>
+            <label for="terminal"> is Terminal? </label>
+            <select name="terminal" id="terminal">
+              <option value="select">Select Yes/No</option>
+              <option value="0">Yes</option>
+              <option value="1">No</option>
             </select>
-        </fieldset>
-    <input class="btn" type="submit" id="updateHealthProblem" value="Update Health Problem">
-  </form> 
-</div>
-<p>&nbsp;</p>
-</div>
-</body>
+          </fieldset>
+          <input class="btn" type="submit" id="updateHealthProblem" value="Update Health Problem">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sangtawun Miller & Andrea Irwin</p>
+    </footer>
+  </body>
 </html>
