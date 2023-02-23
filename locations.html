@@ -13,10 +13,10 @@
     <a href="locations.html">Locations</a>
     <a href="people.html">People</a>
     <a href="health-problems.html">Health Problems</a>
-    <a href="pollution-by-day.html">Dates with Pollution Data</a>
-    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
     <a href="individual-health-issues.html">Individual Health Issues</a>
     <a href="city-health-issues.html">Health Issues By City</a>
+    <a href="pollution-by-day.html">Dates with Pollution Data</a>
+    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
     
     <main>
       <div id="browse">
@@ -67,7 +67,7 @@
           <fieldset class="fields">
             <label> City Name </label> <input type="text" name="city">
             <label> State Name </label> <input type="text" name="state">
-            <label> Population </label> <input type="text" name="population">
+            <label> Population </label> <input type="number" name="population">
           </fieldset>
           <input class="btn" type="submit" id="addLocation" value="Add Location">
         </form>
@@ -86,7 +86,7 @@
               <option value="4">Houston</option>
               <option value="5">Dallas-Fort Worth</option>
             </select>
-            <label> Total Population </label> <input type="text" name="population">
+            <label> Total Population </label> <input type="number" name="population">
           </fieldset>
           <input class="btn" type="submit" id="UpdateLocation" value="Update Location">
         </form>
