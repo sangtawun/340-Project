@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Individual Health Issues</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Individual Health Issues</h1>
+    </header>
+    
+    <a href="index.html">Home</a>
+    <a href="locations.html">Locations</a>
+    <a href="people.html">People</a>
+    <a href="health-problems.html">Health Problems</a>
+    <a href="individual-health-issues.html">Individual Health Issues</a>
+    <a href="city-health-issues.html">Health Issues By City</a>
+    <a href="pollution-by-day.html">Dates with Pollution Data</a>
+    <a href="daily-location-pollution.html">Daily Pollution in Each Location</a>
+    
+    <main>
+      <div id="browse">
+        <h3><strong>Browse Individual Health Issues</strong></h3>
+        <table>
+          <tr>
+            <th>Person Health ID</th>
+            <th>Person ID</th>
+            <th>Health Issue</th>
+            <th>Delete</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>stroke</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePersonHealth('this.personHealthID')"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>pneumonia</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePersonHealth('this.personHealthID')"></td>
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>pneumonia</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePersonHealth('this.personHealthID')"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>chronic obstructive pulmonary disease</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePersonHealth('this.personHealthID')"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>pneumonia</td>
+            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deletePersonHealth('this.personHealthID')"></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div id="browse">
+        <form id="browseIndividualHealthIssue">
+          <legend><strong>Browse Health Issues by Person</strong></legend>
+          <fieldset class="fields">
+            <label for="person"> Select the Personal ID: </label>
+            <select name="person" id="person">
+              <option value="select">Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </fieldset>
+          <input class="btn" type="submit" id="browseIndividualHealthIssue" value="View All">
+        </form>
+      </div>
+      
+      <div id="insert">
+        <form id="addIndividualHealthIssue">
+          <legend><strong>Associate Individuals with a Health Issue</strong></legend>
+          <fieldset class="fields">
+            <label for="person"> Select the Personal ID: </label>
+            <select name="person" id="person">
+              <option value="select">Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="health problem"> Select a Health Problem: </label>
+            <select name="health problem" id="health problem">
+              <option value="select">Select</option>
+              <option value="1">chronic obstructive pulmonary disease</option>
+              <option value="2">stroke</option>
+              <option value="3">ischaemic heart disease</option>
+              <option value="4">lung cancer</option>
+              <option value="5">pneumonia</option>
+            </select>
+          </fieldset>
+          <input class="btn" type="submit" id="addIndividualHealthIssue" value="Add Health Issue">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sangtawun Miller & Andrea Irwin</p>
+    </footer>
+  </body>
+</html>
